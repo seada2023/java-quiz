@@ -1,0 +1,26 @@
+ackage com.ChallengeOne;
+
+public class reverseNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		        int[] originalArray = {1, 2, 3, 4, 5};
+
+		        System.out.println("Original Array:");
+		        printArray(originalArray);
+
+		        reverse(originalArray);
+
+		        System.out.println("Reversed Array:");
+		        printArray(originalArray);
+		    }
+
+		    public static void reverse(int[] array) {
+		        int length = array.length;
+		        for (int i = 0; i < length / 2; i++) {
+		            int temp = array[i];
+		            array[i] = array[length - 1 - i];
+		            array[length - 1 - i] = temp;
+		        }
+		    }
