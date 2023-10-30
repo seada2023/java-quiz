@@ -1,0 +1,38 @@
+package com.ChallengeOne;
+
+import java.util.Scanner;
+
+public class minElementChallenge{
+	
+public static Scanner scannerm = new Scanner(System.in);
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+System.out.print("Enter Integer Number :");
+int count = scannerm.nextInt();
+scannerm.nextLine();
+int []numbers = readIntegers(count);
+int minValue = findMin(numbers);
+System.out.print("The Minimum Number From The Input is : "+minValue);
+scannerm.close();
+	}
+public static int[] readIntegers(int count) {
+	int[]array =new int[count];
+	for (int i=0;i<count;i++) {
+		System.out.print("Enter Integer #" + (i+1)+":");
+		array[i]=scannerm.nextInt();
+		scannerm.nextLine();
+	}
+	return array;
+}
+public static int findMin(int[] array) {
+	int min =array[0];
+	for (int value : array) {
+		if(value<min) {
+			min=value;
+		}
+	}
+	return min;
+}
+}
